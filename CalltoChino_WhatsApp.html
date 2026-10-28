@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Llamar a Chino por WhatsApp</title>
+<style>
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --bg: #f3efe6;
+  --ink: #1d2b24;
+  --muted: #5d6b63;
+  --btn: #c8321f;
+  --btn-press: #9e2616;
+  --ring: #1d2b24;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14201a;
+    --ink: #f1ece0;
+    --muted: #9fb0a5;
+    --btn: #e2452f;
+    --btn-press: #b8341f;
+    --ring: #f1ece0;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14201a;
+  --ink: #f1ece0;
+  --muted: #9fb0a5;
+  --btn: #e2452f;
+  --btn-press: #b8341f;
+  --ring: #f1ece0;
+}
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 7vw, 2.6rem);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+p { margin: 0.4rem 0 0; color: var(--muted); font-size: 1rem; }
+.call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(72vw, 280px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--btn);
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(1.4rem, 6vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.15;
+  box-shadow: 0 10px 0 var(--btn-press);
+  transition: transform .08s ease, box-shadow .08s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.call:active {
+  transform: translateY(8px);
+  box-shadow: 0 2px 0 var(--btn-press);
+}
+.call:focus-visible { outline: 4px solid var(--ring); outline-offset: 6px; }
+.call span { display: block; }
+.call svg { width: 2.4rem; height: 2.4rem; margin: 0 auto 0.5rem; display: block; }
+</style>
+</head>
+<body>
+  <div>
+    <h1>¿Necesitás a Chino?</h1>
+    <p>Tocá el botón para abrir el chat de Chino en WhatsApp y después tocá el ícono de llamada.</p>
+  </div>
+  <a class="call" id="callButton" href="https://wa.me/5492212020425" aria-label="Llamar a Chino por WhatsApp" target="_blank" rel="noopener noreferrer">
+    <span>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+      Llamar a Chino
+    </span>
+  </a>
+</body>
+</html>
